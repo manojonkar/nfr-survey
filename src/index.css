@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+}
+
+@layer components {
+  .card        { @apply bg-white border border-gray-100 rounded-2xl p-5 shadow-sm; }
+  .card-flat   { @apply bg-white border border-gray-100 rounded-xl p-4; }
+  .btn         { @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed; }
+  .btn-primary { @apply bg-brand-600 text-white border-brand-600 hover:bg-brand-800 hover:border-brand-800; }
+  .btn-red     { @apply bg-red-500 text-white border-red-500 hover:bg-red-700; }
+  .btn-sm      { @apply px-3 py-1.5 text-xs rounded-lg; }
+  .btn-lg      { @apply px-6 py-3 text-base rounded-xl; }
+  .input       { @apply w-full px-3 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent bg-white transition-all; }
+  .label       { @apply block text-xs font-medium text-gray-500 mb-1; }
+  .badge       { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+  .badge-blue  { @apply bg-brand-50 text-brand-800; }
+  .badge-green { @apply bg-green-50 text-green-800; }
+  .badge-amber { @apply bg-amber-50 text-amber-800; }
+  .badge-gray  { @apply bg-gray-100 text-gray-600; }
+  .badge-red   { @apply bg-red-50 text-red-700; }
+  .avatar      { @apply w-8 h-8 rounded-full bg-brand-50 text-brand-700 flex items-center justify-center text-xs font-semibold flex-shrink-0; }
+  .avatar-lg   { @apply w-12 h-12 rounded-full bg-brand-50 text-brand-700 flex items-center justify-center text-sm font-semibold flex-shrink-0; }
+  .sec-title   { @apply text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3; }
+  .page-title  { @apply text-xl font-semibold text-gray-900 mb-1; }
+  .page-sub    { @apply text-sm text-gray-400 mb-6; }
+  .divider     { @apply border-t border-gray-100 my-4; }
+  .metric-card { @apply bg-gray-50 rounded-xl p-4; }
+  .score-pill  { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold; }
+  .score-pos   { @apply bg-brand-50 text-brand-800; }
+  .score-zero  { @apply bg-gray-100 text-gray-700; }
+  .score-neg   { @apply bg-red-50 text-red-700; }
+  .table-base  { @apply w-full text-sm; }
+  .table-base th { @apply text-left text-xs font-medium text-gray-400 uppercase tracking-wider pb-2 border-b border-gray-100 px-2; }
+  .table-base td { @apply py-3 px-2 border-b border-gray-50 text-gray-700; }
+  .table-base tr:last-child td { @apply border-b-0; }
+  .table-base tbody tr:hover td { @apply bg-gray-50; }
+  .nav-tab     { @apply flex items-center gap-2 px-4 py-3 text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-800 hover:border-gray-300 transition-all cursor-pointer whitespace-nowrap; }
+  .nav-tab.active { @apply text-brand-600 border-brand-600 font-medium; }
+  .scale-btn   { @apply flex-1 h-11 rounded-xl border text-sm font-bold transition-all cursor-pointer; }
+  .scale-neg   { @apply border-red-100 bg-red-50 text-red-400 hover:bg-red-100 hover:border-red-300; }
+  .scale-zero  { @apply border-gray-100 bg-gray-50 text-gray-400 hover:bg-gray-100; }
+  .scale-pos   { @apply border-brand-100 bg-brand-50 text-brand-400 hover:bg-brand-100; }
+  .scale-sel-neg  { @apply border-red-500 bg-red-500 text-white shadow-sm; }
+  .scale-sel-zero { @apply border-gray-500 bg-gray-500 text-white shadow-sm; }
+  .scale-sel-pos  { @apply border-brand-600 bg-brand-600 text-white shadow-sm; }
+  .sidebar-link { @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-brand-50 hover:text-brand-700 transition-all cursor-pointer; }
+  .sidebar-link.active { @apply bg-brand-50 text-brand-700 font-medium; }
+  .form-group  { @apply mb-4; }
+  .progress-track { @apply flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden; }
+  .progress-fill  { @apply h-full rounded-full bg-brand-600 transition-all duration-500; }
+}
